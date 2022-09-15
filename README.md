@@ -45,9 +45,7 @@ https://pan.baidu.com/s/1Xi3RBYTcZ9kTA5hphzqzHQ Code：8sau
 We recommend getting the augmented dataset from the raw dataset integrated in our repository (about 50M), 
 and use the teacher model (about 120M) to obtain the soft label of the augmented dataset. 
 However, we also provide compiled augmented datasets, as shown below
-链接：https://pan.baidu.com/s/1jAO0HCgs7fbiYiHQmus6QQ 
-提取码：7i02 
---来自百度网盘超级会员V2的分享
+
 ```
 BetaBSDS/
 ├── train/ (https://pan.baidu.com/s/1jAO0HCgs7fbiYiHQmus6QQ Code: 7i02)
