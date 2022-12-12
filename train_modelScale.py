@@ -25,7 +25,7 @@ model_name = 'PiDiNet' # RCF HED PiDiNet
 
 # loss
 W_seq = 1
-W_know = 0.05
+W_know = 0.01
 prior_norm = 100
 
 # lr parameters
