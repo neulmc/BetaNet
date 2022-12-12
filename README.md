@@ -80,7 +80,7 @@ BetaBSDS/
 | RCF-Beta (Ours)| 0.803 | 0.822 |
 | RCF pytorch Version| 0.796 | 0.814 |
 | RCF [2]| 0.798 | 0.815  |
-| PiDiNet-Beta (Ours)| 0.794 | 0.811 |
+| PiDiNet-Beta (Ours)| 0.800 | 0.814 |
 | PiDiNet [3]| 0.789 | 0.803  |
 
 ### Final models
