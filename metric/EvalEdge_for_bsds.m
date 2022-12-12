@@ -11,6 +11,10 @@ for i = 1:size(model_name_lst,2)
         gtDir = 'E:/PycharmProjects/one_shot/BSDS500/data/groundTruth/test';
         edgesEvalDir('resDir',resDir,'gtDir',gtDir, 'thin', 1, 'pDistr',{{'type','parfor'}},'maxDist',0.0075, 'thrs',99); % maxDist 0.011 0.0075
     end
+    if (n_num == 20)
+        gtDir = 'E:/PycharmProjects/one_shot/MulticueGT';
+        edgesEvalDir('resDir',resDir,'gtDir',gtDir, 'thin', 1, 'pDistr',{{'type','parfor'}},'maxDist',0.0075, 'thrs',99); % maxDist 0.011 0.0075
+    end
     if (n_num == 654)
         gtDir = 'K:/gg/one_shot/semi(revised)/semi(revised)/NYUD/test_gt';
         edgesEvalDir('resDir',resDir,'gtDir',gtDir, 'thin', 1, 'pDistr',{{'type','parfor'}},'maxDist',0.011, 'thrs',99); % maxDist 0.011 0.0075
