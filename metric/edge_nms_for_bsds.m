@@ -22,12 +22,18 @@ for i=1:n;
     [Oxy, Oyy] = gradient2(Oy);
     O = mod(atan(Oyy .* sign(-Oxy) ./ (Oxx + 1e-5)), pi);
     % 2 for BSDS500 and Multi-cue datasets, 4 for NYUD dataset
-    % NMS²ÎÊı¶Ô½á¹ûÓĞÓ°Ïì¡£
-    % ÔÚfunction E = edgesNms(E0, O, r, s, m, nThreads)ÖĞ£¬
-    % µÚÒ»¸ö²ÎÊıE0±íÊ¾ÊäÈëµÄ±ßÔµµÄÇ¿¶È£¨»òÕß½Ğ±ßÔµ¸ÅÂÊ£©£»
-    % µÚ¶ş¸ö²ÎÊıO±íÊ¾±ßÔµµÄ·½Ïò£»r±íÊ¾NMS×÷ÓÃµÄ°ë¾¶£»sÊÇÎªÁËÒÖÖÆÍ¼Ïñ±ß½ç¸½½üµÄÔëÉù±ßÔµ£¬
-    % s±íÊ¾Õâ¸öÒÖÖÆµÄ±ß½ç¿í¶È£»m±íÊ¾°Ñ±ßÔµÇ¿¶È³ËÒÔm£»nThreads±íÊ¾¿ªÆô¶àÉÙÏß³Ì½øĞĞNMS²Ù×÷¡£Ö÷ÒªĞèÒªµ÷µÄÊÇ²ÎÊır
+    % NMSå‚æ•°å¯¹ç»“æœæœ‰å½±å“ã€‚
+    % åœ¨function E = edgesNms(E0, O, r, s, m, nThreads)ä¸­ï¼Œ
+    % ç¬¬ä¸€ä¸ªå‚æ•°E0è¡¨ç¤ºè¾“å…¥çš„è¾¹ç¼˜çš„å¼ºåº¦ï¼ˆæˆ–è€…å«è¾¹ç¼˜æ¦‚ç‡ï¼‰ï¼›
+    % ç¬¬äºŒä¸ªå‚æ•°Oè¡¨ç¤ºè¾¹ç¼˜çš„æ–¹å‘ï¼›rè¡¨ç¤ºNMSä½œç”¨çš„åŠå¾„ï¼›sæ˜¯ä¸ºäº†æŠ‘åˆ¶å›¾åƒè¾¹ç•Œé™„è¿‘çš„å™ªå£°è¾¹ç¼˜ï¼Œ
+    % sè¡¨ç¤ºè¿™ä¸ªæŠ‘åˆ¶çš„è¾¹ç•Œå®½åº¦ï¼›mè¡¨ç¤ºæŠŠè¾¹ç¼˜å¼ºåº¦ä¹˜ä»¥mï¼›nThreadsè¡¨ç¤ºå¼€å¯å¤šå°‘çº¿ç¨‹è¿›è¡ŒNMSæ“ä½œã€‚ä¸»è¦éœ€è¦è°ƒçš„æ˜¯å‚æ•°r
     if (n == 200)
+        edge = edgesNmsMex(edge, O, 2, 5, 1.01, 8); % from 1.01 to 1 # edgesNmsMex(edge, O, 2, 5, 1.01, 8)
+        sss = iids(i).name;
+        ppp = [sss(isstrprop([iids(i).name],'digit')) '.png'];
+        imwrite(edge, fullfile(path_to_output, ppp));
+    end
+    if (n == 20) % multicue
         edge = edgesNmsMex(edge, O, 2, 5, 1.01, 8); % from 1.01 to 1 # edgesNmsMex(edge, O, 2, 5, 1.01, 8)
         sss = iids(i).name;
         ppp = [sss(isstrprop([iids(i).name],'digit')) '.png'];
