@@ -39,7 +39,7 @@ introducing uncertainty by the proposed Beta head function.
 5. Train our proposed BetaNet for learning Beta distribution.
 
 We have released the final prediction and evaluation results, which can be downloaded at the following link:
-https://pan.baidu.com/s/1Xi3RBYTcZ9kTA5hphzqzHQ Code：8sau
+https://pan.baidu.com/s/15CigFVsC8huebj1zUAm9ug  Code：w5c1
 
 ### Preprocessing Dataset 
 We recommend getting the augmented dataset from the raw dataset integrated in our repository (about 50M), 
@@ -85,7 +85,7 @@ BetaBSDS/
 
 ### Final models
 This is the final model in our paper. We used this model to evaluate. You can download by:
-https://pan.baidu.com/s/1AJ6I9Jc-Qx6Ofc1QCyD-2Q  Code：0dqh 
+https://pan.baidu.com/s/1nbBG_tcp22nWuhFVrEOVqw  Code：j5fl 
 
 ### Notes
 If we want to train BetaRCF or BataHED, they need to be initialized by VGG16. 
